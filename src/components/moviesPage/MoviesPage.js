@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import { fetchMoviesWithQuery } from '../../services/moviesApi';
 import styles from './movies.module.css';
-
-MoviesPage.propTypes = {
-  history: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
-};
+import { Button } from 'react-bootstrap';
 
 function MoviesPage(props) {
   const [query, setQuery] = useState('');
@@ -47,7 +42,7 @@ function MoviesPage(props) {
 
   return (
     <div className={styles.container}>
-      <h2>MoviesPage</h2>
+      <h2>Movies Page</h2>
       <form className={styles.Form} onSubmit={handleSubmit}>
         <input
           type="text"
@@ -57,11 +52,12 @@ function MoviesPage(props) {
           name="query"
           value={query}
           onChange={handleChange}
+          className={styles.inputForm}
         />
 
-        <button type="submit" className="SearchForm-button">
+        <Button  variant="primary" type="submit" value="Submit" className="SearchForm-button">
           <span className="SearchForm-button-label">Search</span>
-        </button>
+        </Button>
       </form>
 
       <ul>
@@ -85,4 +81,11 @@ function MoviesPage(props) {
     </div>
   );
 }
+
+MoviesPage.propTypes = {
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+};
+
 export default MoviesPage;

@@ -9,15 +9,9 @@ import {
 import PropTypes from 'prop-types';
 
 import { fetchMovieDetails } from '../../services/moviesApi';
-import { Cast } from '../cast/Cast';
+import  Cast  from '../Cast';
 import { Reviews } from '../reviews/Reviews';
 import styles from './movieDetails.module.css';
-
-MovieDetailsPage.propTypes = {
-  history: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
-};
 
 function MovieDetailsPage(props) {
   const [movie, setMovie] = useState({});
@@ -55,7 +49,7 @@ function MovieDetailsPage(props) {
 
   return (
     <>
-      <button type="button" onClick={handelClick} className="btn">
+      <button type="button" onClick={handelClick} className={styles.bttn}>
         Go back
       </button>
       {(movie.id && (
@@ -124,4 +118,10 @@ function MovieDetailsPage(props) {
     </>
   );
 }
+
+MovieDetailsPage.propTypes = {
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+};
 export default MovieDetailsPage;

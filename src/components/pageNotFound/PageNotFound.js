@@ -1,11 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
-PageNotFound.propTypes = {
-  history: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
-};
+import styles from './PageNotFound.module.css';
 
 function PageNotFound(props) {
   const handelClick = () => {
@@ -16,11 +10,18 @@ function PageNotFound(props) {
 
   return (
     <>
-      <button type="button" onClick={handelClick} className="btn">
-        Go home
+      <button type="button" onClick={handelClick} className={styles.bttn}>
+        Return to Home
       </button>
-      <h2 className="descr">Page not found ......</h2>
+      <h2 className="descr">PAGE NOT FOUND!</h2>
     </>
   );
 }
+
+PageNotFound.propTypes = {
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+};
+
 export default PageNotFound;

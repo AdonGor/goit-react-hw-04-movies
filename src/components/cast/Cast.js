@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import { fetchMovieCast } from '../../services/moviesApi';
 
-export function Cast() {
+ function Cast() {
   const [cast, setCast] = useState([]);
   const movieId = useRouteMatch().params.movieId;
 
@@ -37,3 +37,5 @@ export function Cast() {
     </>
   );
 }
+
+export default Cast;

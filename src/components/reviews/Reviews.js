@@ -24,7 +24,7 @@ export function Reviews() {
             </li>
           ))}
         </ul>
-      )) || <p className="descr">We don't have any reviews for this movie.</p>}
+      )) || <p className="descr">We don't have any reviews for this movie</p>}
     </>
   );
 }

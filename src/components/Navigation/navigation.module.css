@@ -18,11 +18,12 @@
 .Link {
   color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .linkFocusColor,
 .Link:hover,
 .Link:focus {
   font-weight: bold;
-  color: teal;
+  color: rgb(250, 175, 15);
 }
