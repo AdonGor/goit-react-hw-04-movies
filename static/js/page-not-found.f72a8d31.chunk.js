@@ -1,2 +1,0 @@
-(this["webpackJsonpgoit-react-hw-04-movies"]=this["webpackJsonpgoit-react-hw-04-movies"]||[]).push([[5],{74:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return c}));var s=n(1);var c=function(t){return Object(s.jsxs)(s.Fragment,{children:[Object(s.jsx)("button",{type:"button",onClick:function(){t.history.push({pathname:"/"})},className:"btn",children:"Return to Home"}),Object(s.jsx)("h2",{className:"descr",children:"PAGE NOT FOUND!"})]})}}}]);
-//# sourceMappingURL=page-not-found.f72a8d31.chunk.js.map
